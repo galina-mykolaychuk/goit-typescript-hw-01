@@ -9,11 +9,13 @@ type UserUpdate = {
   password?: string;
 };
 
-function createOrUpdateUser(initialValues: UserUpdate) {
+// Використовуємо Partial для типу параметра
+function createOrUpdateUser(initialValues: Partial<UserUpdate>) {
   // Оновлення користувача
   console.log("User data:", initialValues);
 }
 
+// Виклик функції з частковими даними
 createOrUpdateUser({
   email: "user@mail.com",
   password: "password123",
